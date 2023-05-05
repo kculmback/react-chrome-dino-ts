@@ -1,0 +1,6 @@
+{
+  "extends": "tsconfig-dino/vite.json",
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

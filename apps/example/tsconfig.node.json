@@ -1,0 +1,4 @@
+{
+  "extends": "tsconfig-dino/vite-node.json",
+  "include": ["vite.config.ts"]
+}
