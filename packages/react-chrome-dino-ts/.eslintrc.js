@@ -1,4 +1,3 @@
 module.exports = {
-  root: true,
-  extends: ["dino"],
-};
+  extends: 'eslint-config-dino',
+}

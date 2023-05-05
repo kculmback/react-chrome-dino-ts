@@ -1,0 +1,104 @@
+/* Copyright 2014 The Chromium Authors. All rights reserved.
+   Use of this source code is governed by a BSD-style license that can be
+   found in the LICENSE file. */
+
+.react-chrome-dino .interstitial-wrapper {
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.6em;
+  margin: 50px auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .react-chrome-dino .interstitial-wrapper {
+    padding: 0 10%;
+  }
+}
+
+@media (max-height: 600px) {
+  .react-chrome-dino .interstitial-wrapper {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .react-chrome-dino .interstitial-wrapper {
+    padding: 0 5%;
+  }
+}
+
+/* Don't use the main frame div when the error is in a subframe. */
+html[subframe] #main-frame-error {
+  display: none;
+}
+
+.react-chrome-dino .hidden {
+  display: none;
+}
+
+/* Don't allow overflow when in a subframe. */
+html[subframe] body {
+  overflow: hidden;
+}
+
+.react-chrome-dino #buttons::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+/* Offline page */
+.react-chrome-dino  .offline .interstitial-wrapper {
+  color: #2b2b2b;
+  font-size: 1em;
+  line-height: 1.55;
+  margin: 100px auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.react-chrome-dino  .offline .runner-container {
+  height: 150px;
+  max-width: 600px;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  width: 44px;
+  z-index: 2;
+}
+
+.react-chrome-dino .offline .runner-canvas {
+  height: 150px;
+  max-width: 600px;
+  opacity: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.react-chrome-dino .offline .controller {
+  background: rgba(247,247,247, .1);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.react-chrome-dino #offline-resources {
+  display: none;
+}
+
+.react-chrome-dino .instructions p {
+  text-align: center;
+}
+
+@media (max-height: 350px) {
+  .react-chrome-dino .interstitial-wrapper {
+    margin-top: 5%;
+  }
+}
