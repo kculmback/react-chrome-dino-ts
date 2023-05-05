@@ -8,9 +8,10 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.25.2",
     "turbo": "latest",
     "typescript": "^5.0.4"
