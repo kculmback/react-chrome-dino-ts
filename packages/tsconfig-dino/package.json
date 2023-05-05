@@ -2,8 +2,11 @@
   "name": "tsconfig-dino",
   "version": "0.0.0",
   "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+  "type": "module",
+  "files": [
+    "base.json",
+    "react-library.json",
+    "vite.json",
+    "vite-node.json"
+  ]
 }
