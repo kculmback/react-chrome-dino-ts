@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dino",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.52.0",
