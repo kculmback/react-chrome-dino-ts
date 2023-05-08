@@ -1,5 +1,11 @@
 # react-chrome-dino-ts
 
+## 0.1.2
+
+### Patch Changes
+
+- 2fbb42c: add props to customize instructions
+
 ## 0.1.1
 
 ### Patch Changes
