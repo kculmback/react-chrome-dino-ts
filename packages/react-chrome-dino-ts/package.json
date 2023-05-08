@@ -1,6 +1,6 @@
 {
   "name": "react-chrome-dino-ts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component to include the dino game from Google in your site.",
   "author": "Kasey Culmback <me@kasey.culmback.com>",
   "license": "MIT",
