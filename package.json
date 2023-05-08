@@ -1,5 +1,11 @@
 {
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kculmback/react-chrome-dino-ts"
+  },
+  "author": "Kasey Culmback <me@kasey.culmback.com>",
+  "license": "MIT",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --no-cache --continue",
