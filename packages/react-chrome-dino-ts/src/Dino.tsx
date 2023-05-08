@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { DinoScript } from './DinoScript'
 import { Resources } from './Resources'
 import './Dino.css'
 
-const DinoGame = React.forwardRef<HTMLDivElement>(function DinoGame(props, ref) {
+export interface DinoGameProps {
+  /**
+   * Replaces the default instructions.
+   */
+  instructions?: ReactNode
+  /**
+   * If true the instructions block will be hidden.
+   */
+  hideInstructions?: boolean
+}
+
+const DinoGame = React.forwardRef<HTMLDivElement, DinoGameProps>(function DinoGame(
+  { instructions, hideInstructions },
+  ref
+) {
   const startDiv = React.useRef<HTMLDivElement>(null)
   const endDiv = React.useRef<HTMLDivElement>(null)
 
@@ -28,17 +42,22 @@ const DinoGame = React.forwardRef<HTMLDivElement>(function DinoGame(props, ref) 
   }, [])
 
   return (
-    <div ref={ref} {...props}>
+    <div ref={ref}>
       <div ref={startDiv} className="react-chrome-dino">
         <div className="interstitial-wrapper" id="main-frame-error">
           <Resources />
           <div ref={endDiv}></div>
         </div>
-        <div className="interstitial-wrapper instructions">
-          <p>
-            Press the <span className="kbd">spacebar</span> to start the game and to jump
-          </p>
-        </div>
+
+        {!hideInstructions && (
+          <div className="interstitial-wrapper instructions">
+            {instructions || (
+              <p>
+                Press the <span className="kbd">spacebar</span> to start the game and to jump.
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )
